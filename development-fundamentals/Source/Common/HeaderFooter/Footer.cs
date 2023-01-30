@@ -1,8 +1,8 @@
-﻿using HeaderFooter.Lib.Interfaces;
+﻿using HeaderFooter.Interfaces;
 
 using static System.Console;
 
-namespace HeaderFooter.Lib
+namespace HeaderFooter
 {
 
     public class Footer : IFooter

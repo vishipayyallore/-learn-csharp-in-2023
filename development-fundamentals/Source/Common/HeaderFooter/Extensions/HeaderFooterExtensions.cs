@@ -1,7 +1,7 @@
-﻿using HeaderFooter.Lib.Interfaces;
+﻿using HeaderFooter.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace HeaderFooter.Lib.Extensions
+namespace HeaderFooter.Extensions
 {
 
     public static class HeaderFooterExtensions

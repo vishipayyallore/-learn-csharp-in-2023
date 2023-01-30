@@ -1,4 +1,4 @@
-﻿namespace HeaderFooter.Lib.Interfaces
+﻿namespace HeaderFooter.Interfaces
 {
 
     public interface IHeader
