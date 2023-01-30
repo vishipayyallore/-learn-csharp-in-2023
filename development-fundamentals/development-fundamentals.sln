@@ -13,6 +13,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HeaderFooter", "Source\Comm
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NamesGenerator", "Source\Common\NamesGenerator\NamesGenerator.csproj", "{3A5FE208-3081-42BD-B3BF-7831C24E3E13}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ArrayDemos", "ArrayDemos", "{73192FA2-E4AE-4BB8-8EB0-300FD56D4F07}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NamesArray.Lib", "Source\ArrayDemos\NamesArray.Lib\NamesArray.Lib.csproj", "{96CFA8A8-AF6A-48DD-8463-067ADFEEC93D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,10 @@ Global
 		{3A5FE208-3081-42BD-B3BF-7831C24E3E13}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A5FE208-3081-42BD-B3BF-7831C24E3E13}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3A5FE208-3081-42BD-B3BF-7831C24E3E13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96CFA8A8-AF6A-48DD-8463-067ADFEEC93D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96CFA8A8-AF6A-48DD-8463-067ADFEEC93D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96CFA8A8-AF6A-48DD-8463-067ADFEEC93D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96CFA8A8-AF6A-48DD-8463-067ADFEEC93D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -35,6 +43,8 @@ Global
 		{1EFF80C9-729E-4538-A546-686CE29D42C9} = {2A081C27-A2FB-49ED-B644-42C6BC49CDD1}
 		{BC1538AF-6D4F-46AC-9A27-95E8EA495306} = {1EFF80C9-729E-4538-A546-686CE29D42C9}
 		{3A5FE208-3081-42BD-B3BF-7831C24E3E13} = {1EFF80C9-729E-4538-A546-686CE29D42C9}
+		{73192FA2-E4AE-4BB8-8EB0-300FD56D4F07} = {2A081C27-A2FB-49ED-B644-42C6BC49CDD1}
+		{96CFA8A8-AF6A-48DD-8463-067ADFEEC93D} = {73192FA2-E4AE-4BB8-8EB0-300FD56D4F07}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {97C23BF3-8463-4844-B8CA-00DD01D3E0A6}
