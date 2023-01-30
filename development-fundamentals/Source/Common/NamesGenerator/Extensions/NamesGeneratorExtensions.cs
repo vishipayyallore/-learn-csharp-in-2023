@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using NamesGenerator.Lib.Interfaces;
+using NamesGenerator.Interfaces;
 
-namespace NamesGenerator.Lib.Extensions
+namespace NamesGenerator.Extensions
 {
     public static class NamesGeneratorExtensions
     {

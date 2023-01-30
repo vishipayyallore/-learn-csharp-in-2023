@@ -1,4 +1,4 @@
-﻿namespace NamesGenerator.Lib.Interfaces
+﻿namespace NamesGenerator.Interfaces
 {
 
     public interface IGenerateNames

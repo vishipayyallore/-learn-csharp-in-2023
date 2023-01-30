@@ -1,7 +1,7 @@
-﻿using NamesGenerator.Lib.Interfaces;
+﻿using NamesGenerator.Interfaces;
 using System.Text;
 
-namespace NamesGenerator.Lib
+namespace NamesGenerator
 {
 
     public class GenerateNames : IGenerateNames
