@@ -14,4 +14,8 @@
     <ProjectReference Include="..\..\Common\NamesGenerator\NamesGenerator.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Using Include="System.Console" Static="true" />
+  </ItemGroup>
+  
 </Project>

@@ -1,7 +1,5 @@
 ﻿using HeaderFooter.Interfaces;
 
-using static System.Console;
-
 namespace HeaderFooter
 {
 
