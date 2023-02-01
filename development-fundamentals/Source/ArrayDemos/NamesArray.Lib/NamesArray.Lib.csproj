@@ -10,4 +10,8 @@
     <Folder Include="Dependencies\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\NamesGenerator\NamesGenerator.csproj" />
+  </ItemGroup>
+
 </Project>
