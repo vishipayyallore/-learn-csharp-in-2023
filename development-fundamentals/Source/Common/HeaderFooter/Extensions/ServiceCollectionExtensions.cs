@@ -4,7 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 namespace HeaderFooter.Extensions
 {
 
-    public static class HeaderFooterExtensions
+    public static class ServiceCollectionExtensions
     {
 
         public static IServiceCollection ConfigureHeaderFooterServices(this IServiceCollection services)

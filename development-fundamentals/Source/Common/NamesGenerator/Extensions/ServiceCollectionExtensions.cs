@@ -3,7 +3,7 @@ using NamesGenerator.Interfaces;
 
 namespace NamesGenerator.Extensions
 {
-    public static class NamesGeneratorExtensions
+    public static class ServiceCollectionExtensions
     {
         public static IServiceCollection ConfigureNamesGeneratorServices(this IServiceCollection services)
         {

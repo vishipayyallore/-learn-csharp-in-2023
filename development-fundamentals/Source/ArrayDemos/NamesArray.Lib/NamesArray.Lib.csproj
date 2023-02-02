@@ -7,7 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Dependencies\" />
+    <ProjectReference Include="..\..\Common\NamesGenerator\NamesGenerator.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Using Include="System.Console" Static="true" />
+  </ItemGroup>
+  
 </Project>
