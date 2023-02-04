@@ -12,13 +12,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Runnable\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\..\Common\HeaderFooter\HeaderFooter.csproj" />
     <ProjectReference Include="..\..\Common\NamesGenerator\NamesGenerator.csproj" />
     <ProjectReference Include="..\NamesArray.Lib\NamesArray.Lib.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Using Include="System.Console" Static="true" />
+  </ItemGroup>
+  
 </Project>

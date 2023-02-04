@@ -1,5 +1,7 @@
-﻿using Microsoft.Extensions.Hosting;
+﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using NamesArray.Run.Extensions;
+using NamesArray.Run.Runnable;
 
 using var host = Host.CreateDefaultBuilder(args)
     .ConfigureServices((_, services) =>
@@ -7,3 +9,8 @@ using var host = Host.CreateDefaultBuilder(args)
         services.ConfigureServices();
     })
     .Build();
+
+host.Services.GetRequiredService<NamesArrayDemoApp>()?.Run();
+
+WriteLine("\n\nPress any key ... ");
+ReadKey();
