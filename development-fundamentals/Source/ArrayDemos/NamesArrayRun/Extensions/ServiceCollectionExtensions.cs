@@ -1,7 +1,7 @@
 ﻿using HeaderFooter.Extensions;
 using Microsoft.Extensions.DependencyInjection;
-using NamesArray.Lib.Extensions;
 using NamesArray.Run.Runnable;
+using NamesArrayLib.Extensions;
 using NamesGenerator.Extensions;
 
 namespace NamesArray.Run.Extensions

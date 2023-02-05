@@ -1,7 +1,8 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using NamesArray.Lib.Interfaces;
+using NamesArrayLib;
+using NamesArrayLib.Interfaces;
 
-namespace NamesArray.Lib.Extensions
+namespace NamesArrayLib.Extensions
 {
 
     public static class ServiceCollectionExtensions

@@ -1,4 +1,4 @@
-﻿namespace NamesArray.Lib.Interfaces
+﻿namespace NamesArrayLib.Interfaces
 {
 
     public interface IPrintHelper

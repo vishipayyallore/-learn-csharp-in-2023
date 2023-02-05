@@ -1,5 +1,5 @@
 ﻿using HeaderFooter.Interfaces;
-using NamesArray.Lib.Interfaces;
+using NamesArrayLib.Interfaces;
 
 namespace NamesArray.Run.Runnable
 {
