@@ -1,10 +1,10 @@
 ﻿using HeaderFooter.Extensions;
 using Microsoft.Extensions.DependencyInjection;
-using NamesArray.Run.Runnable;
 using NamesArrayLib.Extensions;
+using NamesArrayRun.Runnable;
 using NamesGenerator.Extensions;
 
-namespace NamesArray.Run.Extensions
+namespace NamesArrayRun.Extensions
 {
 
     public static class ServiceCollectionExtensions

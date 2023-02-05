@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using NamesArray.Run.Extensions;
-using NamesArray.Run.Runnable;
+using NamesArrayRun.Extensions;
+using NamesArrayRun.Runnable;
 
 using var host = Host.CreateDefaultBuilder(args)
     .ConfigureServices((_, services) =>

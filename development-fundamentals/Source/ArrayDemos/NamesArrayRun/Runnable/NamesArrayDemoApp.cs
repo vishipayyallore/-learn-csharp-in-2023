@@ -1,7 +1,7 @@
 ﻿using HeaderFooter.Interfaces;
 using NamesArrayLib.Interfaces;
 
-namespace NamesArray.Run.Runnable
+namespace NamesArrayRun.Runnable
 {
     internal class NamesArrayDemoApp
     {
