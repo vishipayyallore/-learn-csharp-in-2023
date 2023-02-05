@@ -14,6 +14,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Common\HeaderFooter\HeaderFooter.csproj" />
     <ProjectReference Include="..\..\Common\NamesGenerator\NamesGenerator.csproj" />
+    <ProjectReference Include="..\NamesArrayLib\NamesArrayLib.csproj" />
   </ItemGroup>
 
   <ItemGroup>
