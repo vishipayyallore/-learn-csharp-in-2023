@@ -1,21 +1,21 @@
-﻿using HeaderFooter.Interfaces;
-using Microsoft.Extensions.DependencyInjection;
+﻿//using HeaderFooter.Interfaces;
+//using Microsoft.Extensions.DependencyInjection;
 
-namespace HeaderFooter.Extensions
-{
+//namespace HeaderFooter.Extensions
+//{
 
-    public static class ServiceCollectionExtensions
-    {
+//    public static class ServiceCollectionExtensions
+//    {
 
-        public static IServiceCollection ConfigureHeaderFooterServices(this IServiceCollection services)
-        {
-            _ = services.AddTransient<IFooter, Footer>();
+//        public static IServiceCollection ConfigureHeaderFooterServices(this IServiceCollection services)
+//        {
+//            _ = services.AddTransient<IFooter, Footer>();
 
-            _ = services.AddTransient<IHeader, Header>();
+//            _ = services.AddTransient<IHeader, Header>();
 
-            return services;
-        }
+//            return services;
+//        }
 
-    }
+//    }
 
-}
+//}

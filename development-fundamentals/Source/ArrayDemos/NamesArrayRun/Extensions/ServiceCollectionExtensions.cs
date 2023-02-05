@@ -1,8 +1,11 @@
-﻿using HeaderFooter.Extensions;
+﻿using HeaderFooter;
+using HeaderFooter.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
-using NamesArrayLib.Extensions;
 using NamesArrayRun.Runnable;
-using NamesGenerator.Extensions;
+using NamesGenerator.Interfaces;
+using NamesGenerator;
+using NamesArrayLib.Interfaces;
+using NamesArrayLib;
 
 namespace NamesArrayRun.Extensions
 {
@@ -11,9 +14,13 @@ namespace NamesArrayRun.Extensions
     {
         public static IServiceCollection ConfigureServices(this IServiceCollection services)
         {
-            _ = services.ConfigureHeaderFooterServices();
-            _ = services.ConfigureNamesGeneratorServices();
-            _ = services.ConfigureNamesArrayDemoServices();
+            _ = services.AddTransient<IFooter, Footer>();
+            _ = services.AddTransient<IHeader, Header>();
+
+            _ = services.AddTransient<IGenerateNames, GenerateNames>();
+
+            _ = services.AddTransient<INamesArray, NamesArray>();
+            _ = services.AddTransient<IPrintHelper, PrintHelper>();
 
             // IMPORTANT! Register the application entry point
             _ = services.AddTransient<NamesArrayDemoApp>();
