@@ -1,11 +1,11 @@
 ﻿using HeaderFooter;
 using HeaderFooter.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
-using NamesArrayRun.Runnable;
-using NamesGenerator.Interfaces;
-using NamesGenerator;
-using NamesArrayLib.Interfaces;
 using NamesArrayLib;
+using NamesArrayLib.Interfaces;
+using NamesArrayRun.Runnable;
+using NamesGenerator;
+using NamesGenerator.Interfaces;
 
 namespace NamesArrayRun.Extensions
 {
