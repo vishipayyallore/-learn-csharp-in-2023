@@ -1,6 +1,6 @@
-﻿using NamesArray.Lib.Interfaces;
+﻿using NamesArrayLib.Interfaces;
 
-namespace NamesArray.Lib
+namespace NamesArrayLib
 {
 
     public class PrintHelper : IPrintHelper

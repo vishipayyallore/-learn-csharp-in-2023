@@ -1,7 +1,7 @@
-﻿using NamesArray.Lib.Interfaces;
+﻿using NamesArrayLib.Interfaces;
 using NamesGenerator.Interfaces;
 
-namespace NamesArray.Lib
+namespace NamesArrayLib
 {
 
     public class NamesArray : INamesArray
