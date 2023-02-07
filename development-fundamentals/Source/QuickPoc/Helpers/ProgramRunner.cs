@@ -1,15 +1,21 @@
-﻿using HeaderFooter;
-using HeaderFooter.Interfaces;
+﻿using HeaderFooter.Interfaces;
 using QuickPoc.Interfaces;
 
 namespace QuickPoc.Helpers
 {
-    public static class ProgramRunner
+    public class ProgramRunner
     {
-        private static readonly IHeader _header = new Header();
-        private static readonly IFooter _footer = new Footer();
+        private readonly IHeader _header;
+        private readonly IFooter _footer;
 
-        public static void Run(IDemoProgram demoProgram, string programTitle = "No Title")
+        public ProgramRunner(IHeader header, IFooter footer)
+        {
+            _header = header ?? throw new ArgumentNullException(nameof(header));
+
+            _footer = footer ?? throw new ArgumentNullException(nameof(footer));
+        }
+
+        public void Run(IDemoProgram demoProgram, string programTitle = "No Title")
         {
             _header.DisplayHeader('=', programTitle);
 

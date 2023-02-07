@@ -2,13 +2,18 @@
 
 namespace QuickPoc.Set1
 {
-    public static class SetOneDemos
+    public class SetOneDemos
     {
+        private readonly ProgramRunner _programRunner;
 
-        public static void Run()
+        public SetOneDemos(ProgramRunner programRunner)
         {
-            ProgramRunner.Run(new EnvironmentDetials(), "Environment Details");
+            _programRunner = programRunner ?? throw new ArgumentNullException(nameof(programRunner));
+        }
 
+        public void Run()
+        {
+            _programRunner.Run(new EnvironmentDetials(), "Environment Details");
         }
 
     }
