@@ -3,7 +3,7 @@
 
     public interface IDemoProgram
     {
-        void RunProgram();
+        void Run();
     }
 
 }

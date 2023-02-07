@@ -20,7 +20,7 @@ namespace QuickPoc.Runners
             _header.DisplayHeader('=', programTitle);
 
             ForegroundColor = ConsoleColor.Cyan;
-            demoProgram.RunProgram();
+            demoProgram.Run();
             ResetColor();
 
             _footer.DisplayFooter('-');
