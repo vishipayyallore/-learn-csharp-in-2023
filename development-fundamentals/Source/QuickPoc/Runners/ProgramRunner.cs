@@ -1,7 +1,7 @@
 ﻿using HeaderFooter.Interfaces;
 using QuickPoc.Interfaces;
 
-namespace QuickPoc.Helpers
+namespace QuickPoc.Runners
 {
     public class ProgramRunner
     {
@@ -21,7 +21,7 @@ namespace QuickPoc.Helpers
 
             ForegroundColor = ConsoleColor.Cyan;
             demoProgram.RunProgram();
-            Console.ResetColor();
+            ResetColor();
 
             _footer.DisplayFooter('-');
         }

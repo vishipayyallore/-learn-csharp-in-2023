@@ -1,6 +1,6 @@
 ﻿using QuickPoc.Set1;
 
-namespace QuickPoc.Helpers
+namespace QuickPoc.Runners
 {
     public class SetOneRunner
     {

@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using QuickPoc.Extensions;
-using QuickPoc.Helpers;
+using QuickPoc.Runners;
 
 using var host = Host.CreateDefaultBuilder(args)
     .ConfigureServices((_, services) =>
