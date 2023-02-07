@@ -13,8 +13,10 @@ namespace QuickPoc.Extensions
             _ = services.AddTransient<IFooter, Footer>();
             _ = services.AddTransient<IHeader, Header>();
 
-            // IMPORTANT! Register the application entry point
             _ = services.AddTransient<ProgramRunner>();
+
+            // IMPORTANT! Register the application entry point
+            _ = services.AddTransient<SetOneRunner>();
 
             return services;
         }

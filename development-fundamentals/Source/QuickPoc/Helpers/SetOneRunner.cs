@@ -1,12 +1,12 @@
-﻿using QuickPoc.Helpers;
+﻿using QuickPoc.Set1;
 
-namespace QuickPoc.Set1
+namespace QuickPoc.Helpers
 {
-    public class SetOneDemos
+    public class SetOneRunner
     {
         private readonly ProgramRunner _programRunner;
 
-        public SetOneDemos(ProgramRunner programRunner)
+        public SetOneRunner(ProgramRunner programRunner)
         {
             _programRunner = programRunner ?? throw new ArgumentNullException(nameof(programRunner));
         }
