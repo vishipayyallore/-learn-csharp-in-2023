@@ -23,7 +23,7 @@ namespace NamesArrayRun.Extensions
             _ = services.AddTransient<IPrintHelper, PrintHelper>();
 
             // IMPORTANT! Register the application entry point
-            _ = services.AddTransient<NamesArrayDemoApp>();
+            _ = services.AddTransient<NamesArrayApp>();
 
             return services;
         }

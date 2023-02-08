@@ -16,7 +16,10 @@ namespace NamesArrayListLib
 
         public ArrayList GenerateNames(int nameLength = 10, int numberOfNames = 10)
         {
-            return ArrayList.Repeat(_nameGenerator.GetNames(nameLength, numberOfNames), numberOfNames);
+            var namesArrayList = new ArrayList();
+            namesArrayList.AddRange(_nameGenerator.GetNames(nameLength, numberOfNames));
+
+            return namesArrayList;
         }
 
     }

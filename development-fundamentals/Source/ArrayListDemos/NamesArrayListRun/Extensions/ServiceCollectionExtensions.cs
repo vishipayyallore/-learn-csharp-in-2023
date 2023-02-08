@@ -3,6 +3,7 @@ using HeaderFooter.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
 using NamesArrayListLib;
 using NamesArrayListLib.Interfaces;
+using NamesArrayListRun.Runnable;
 using NamesGenerator;
 using NamesGenerator.Interfaces;
 
@@ -22,7 +23,7 @@ namespace NamesArrayListRun.Extensions
             _ = services.AddTransient<IPrintHelper, PrintHelper>();
 
             // IMPORTANT! Register the application entry point
-            // _ = services.AddTransient<NamesArrayDemoApp>();
+            _ = services.AddTransient<NamesArrayListApp>();
 
             return services;
         }
