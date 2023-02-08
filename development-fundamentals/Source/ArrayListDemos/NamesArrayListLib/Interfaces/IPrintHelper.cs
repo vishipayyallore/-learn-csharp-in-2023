@@ -1,6 +1,11 @@
-﻿namespace NamesArrayListLib.Interfaces
+﻿using System.Collections;
+
+namespace NamesArrayListLib.Interfaces
 {
-    internal class IPrintHelper
+
+    public interface IPrintHelper
     {
+        void Print(ArrayList names);
     }
+
 }
