@@ -2,6 +2,7 @@
 using HeaderFooter.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
 using QuickPoc.Runners;
+using QuickPoc.Set1;
 
 namespace QuickPoc.Extensions
 {
@@ -17,6 +18,8 @@ namespace QuickPoc.Extensions
 
             // IMPORTANT! Register the application entry point
             _ = services.AddTransient<SetOneRunner>();
+
+            _ = services.AddTransient<CommandLineArguments>();
 
             return services;
         }
