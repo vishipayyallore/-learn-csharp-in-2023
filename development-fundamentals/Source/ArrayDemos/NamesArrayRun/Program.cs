@@ -10,7 +10,7 @@ using var host = Host.CreateDefaultBuilder(args)
     })
     .Build();
 
-host.Services.GetRequiredService<NamesArrayDemoApp>()?.Run();
+host.Services.GetRequiredService<NamesArrayApp>()?.Run();
 
 WriteLine("\n\nPress any key ... ");
 ReadKey();

@@ -3,14 +3,14 @@ using NamesArrayLib.Interfaces;
 
 namespace NamesArrayRun.Runnable
 {
-    internal class NamesArrayDemoApp
+    internal class NamesArrayApp
     {
         private readonly INamesArray _namesArray;
         private readonly IPrintHelper _printHelper;
         private readonly IHeader _header;
         private readonly IFooter _footer;
 
-        public NamesArrayDemoApp(INamesArray namesArray, IPrintHelper printHelper, IHeader header, IFooter footer)
+        public NamesArrayApp(INamesArray namesArray, IPrintHelper printHelper, IHeader header, IFooter footer)
         {
             _namesArray = namesArray ?? throw new ArgumentNullException(nameof(namesArray));
 
