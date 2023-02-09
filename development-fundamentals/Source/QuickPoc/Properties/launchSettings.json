@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "QuickPoc": {
+      "commandName": "Project",
+      "commandLineArgs": "blue Magenta 50"
+    }
+  }
+}
