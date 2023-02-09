@@ -1,4 +1,5 @@
 ﻿using PrintHelperLib.Interfaces;
+using System.Collections;
 
 namespace PrintHelperLib
 {
@@ -13,6 +14,14 @@ namespace PrintHelperLib
             {
                 WriteLine($"{index++}. {name} ({name.Length})");
             });
+        }
+
+        public void Print(ArrayList names)
+        {
+            foreach (string name in names)
+            {
+                WriteLine(name);
+            }
         }
     }
 
