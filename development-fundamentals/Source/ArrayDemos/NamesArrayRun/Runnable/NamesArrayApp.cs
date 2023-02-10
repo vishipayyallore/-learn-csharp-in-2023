@@ -1,5 +1,6 @@
 ﻿using HeaderFooter.Interfaces;
 using NamesArrayLib.Interfaces;
+using PrintHelperLib.Interfaces;
 
 namespace NamesArrayRun.Runnable
 {

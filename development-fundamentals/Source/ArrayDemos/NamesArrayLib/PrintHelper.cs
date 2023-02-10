@@ -1,19 +1,19 @@
-﻿using NamesArrayLib.Interfaces;
+﻿//using NamesArrayLib.Interfaces;
 
-namespace NamesArrayLib
-{
+//namespace NamesArrayLib
+//{
 
-    public class PrintHelper : IPrintHelper
-    {
-        public void Print(string[] names)
-        {
-            int index = 1;
+//    public class PrintHelper : IPrintHelper
+//    {
+//        public void Print(string[] names)
+//        {
+//            int index = 1;
 
-            Array.ForEach(names, (name) =>
-            {
-                WriteLine($"{index++}. {name} ({name.Length})");
-            });
-        }
-    }
+//            Array.ForEach(names, (name) =>
+//            {
+//                WriteLine($"{index++}. {name} ({name.Length})");
+//            });
+//        }
+//    }
 
-}
+//}
