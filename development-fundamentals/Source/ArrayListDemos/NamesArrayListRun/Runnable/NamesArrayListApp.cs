@@ -30,7 +30,7 @@ namespace NamesArrayListRun.Runnable
             _header.DisplayHeader('=', "Names ArrayList Demo");
 
             ForegroundColor = ConsoleColor.Cyan;
-            _printHelper.Print(_namesArrayList.GenerateNames(numberOfNames: 10, nameLength: _random.Next(5, 10)));
+            _printHelper.Print(_namesArrayList.GenerateNames(nameLength: _random.Next(5, 10), numberOfNames: 10));
             ResetColor();
 
             _footer.DisplayFooter('-');
