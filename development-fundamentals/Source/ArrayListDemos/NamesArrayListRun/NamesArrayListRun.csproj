@@ -13,7 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Common\HeaderFooter\HeaderFooter.csproj" />
-    <ProjectReference Include="..\..\Common\NamesGenerator\NamesGenerator.csproj" />
+    <ProjectReference Include="..\..\common\PrintHelperLib\PrintHelperLib.csproj" />
     <ProjectReference Include="..\NamesArrayListLib\NamesArrayListLib.csproj" />
   </ItemGroup>
 

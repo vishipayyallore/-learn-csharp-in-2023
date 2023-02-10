@@ -18,9 +18,11 @@ namespace PrintHelperLib
 
         public void Print(ArrayList names)
         {
+            int index = 1;
+
             foreach (string name in names)
             {
-                WriteLine(name);
+                WriteLine($"{index++}. {name} ({name.Length})");
             }
         }
     }

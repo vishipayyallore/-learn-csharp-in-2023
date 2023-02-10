@@ -1,5 +1,6 @@
 ﻿using HeaderFooter.Interfaces;
 using NamesArrayListLib.Interfaces;
+using PrintHelperLib.Interfaces;
 
 namespace NamesArrayListRun.Runnable
 {
@@ -29,7 +30,7 @@ namespace NamesArrayListRun.Runnable
             _header.DisplayHeader('=', "Names ArrayList Demo");
 
             ForegroundColor = ConsoleColor.Cyan;
-            _printHelper.Print(_namesArrayList.GenerateNames(numberOfNames: 10, nameLength: _random.Next(1, 10)));
+            _printHelper.Print(_namesArrayList.GenerateNames(numberOfNames: 10, nameLength: _random.Next(5, 10)));
             ResetColor();
 
             _footer.DisplayFooter('-');

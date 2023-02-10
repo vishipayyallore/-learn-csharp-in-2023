@@ -40,7 +40,7 @@ namespace NamesGenerator
                 index += 2;
             }
 
-            return name.ToString();
+            return name.ToString()[..length];
         }
 
     }
