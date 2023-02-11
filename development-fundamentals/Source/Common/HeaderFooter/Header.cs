@@ -11,7 +11,7 @@ namespace HeaderFooter
             var leftPadValue = ((length - title.Length) / 2) + title.Length;
             string headerValue = new(header, length);
 
-            ForegroundColor = ConsoleColor.Yellow;
+            ForegroundColor = foregroundColor;
 
             WriteLine($"\n\n{headerValue}");
             WriteLine(title.PadLeft(leftPadValue));
