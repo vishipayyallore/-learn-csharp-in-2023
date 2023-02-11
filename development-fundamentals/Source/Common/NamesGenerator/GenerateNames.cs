@@ -39,7 +39,7 @@ public class GenerateNames : IGenerateNames
             index += 2;
         }
 
-        return name.ToString()[..length];
+        return name.ToString()[..10]; // Range Operator instead of SubString()
     }
 
 }
