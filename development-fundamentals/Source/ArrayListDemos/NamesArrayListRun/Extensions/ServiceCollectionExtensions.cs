@@ -6,6 +6,8 @@ using NamesArrayListLib.Interfaces;
 using NamesArrayListRun.Runnable;
 using NamesGenerator;
 using NamesGenerator.Interfaces;
+using PrintHelperLib;
+using PrintHelperLib.Interfaces;
 
 namespace NamesArrayListRun.Extensions
 {
