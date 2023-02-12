@@ -2,40 +2,37 @@
 using NamesArrayListLib.Interfaces;
 using PrintHelperLib.Interfaces;
 
-namespace NamesArrayListRun.Runnable
+namespace NamesArrayListRun.Runnable;
+
+internal class NamesArrayListApp
 {
+    private readonly INamesArrayList _namesArrayList;
+    private readonly IPrintHelper _printHelper;
+    private readonly IHeader _header;
+    private readonly IFooter _footer;
 
-    internal class NamesArrayListApp
+    public NamesArrayListApp(INamesArrayList namesArrayList, IPrintHelper printHelper, IHeader header, IFooter footer)
     {
-        private readonly INamesArrayList _namesArrayList;
-        private readonly IPrintHelper _printHelper;
-        private readonly IHeader _header;
-        private readonly IFooter _footer;
+        _namesArrayList = namesArrayList ?? throw new ArgumentNullException(nameof(namesArrayList));
 
-        public NamesArrayListApp(INamesArrayList namesArrayList, IPrintHelper printHelper, IHeader header, IFooter footer)
-        {
-            _namesArrayList = namesArrayList ?? throw new ArgumentNullException(nameof(namesArrayList));
+        _printHelper = printHelper ?? throw new ArgumentNullException(nameof(printHelper));
 
-            _printHelper = printHelper ?? throw new ArgumentNullException(nameof(printHelper));
+        _header = header ?? throw new ArgumentNullException(nameof(header));
 
-            _header = header ?? throw new ArgumentNullException(nameof(header));
+        _footer = footer ?? throw new ArgumentNullException(nameof(footer));
+    }
 
-            _footer = footer ?? throw new ArgumentNullException(nameof(footer));
-        }
+    public void Run()
+    {
+        Random _random = new();
 
-        public void Run()
-        {
-            Random _random = new();
+        _header.DisplayHeader('=', "Names ArrayList Demo");
 
-            _header.DisplayHeader('=', "Names ArrayList Demo");
+        ForegroundColor = ConsoleColor.Cyan;
+        _printHelper.Print(_namesArrayList.GenerateNames(nameLength: _random.Next(5, 10), numberOfNames: 10));
+        ResetColor();
 
-            ForegroundColor = ConsoleColor.Cyan;
-            _printHelper.Print(_namesArrayList.GenerateNames(nameLength: _random.Next(5, 10), numberOfNames: 10));
-            ResetColor();
-
-            _footer.DisplayFooter('-');
-        }
-
+        _footer.DisplayFooter('-');
     }
 
 }

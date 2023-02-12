@@ -1,9 +1,6 @@
-﻿namespace NamesArrayLib.Interfaces
+﻿namespace NamesArrayLib.Interfaces;
+
+public interface INamesArray
 {
-
-    public interface INamesArray
-    {
-        string[] GenerateNames(int nameLength = 10, int numberOfNames = 10);
-    }
-
+    string[] GenerateNames(int nameLength = 10, int numberOfNames = 10);
 }
