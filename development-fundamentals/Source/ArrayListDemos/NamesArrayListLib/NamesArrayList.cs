@@ -2,26 +2,23 @@
 using NamesGenerator.Interfaces;
 using System.Collections;
 
-namespace NamesArrayListLib
+namespace NamesArrayListLib;
+
+public class NamesArrayList : INamesArrayList
 {
+    private readonly IGenerateNames _nameGenerator;
 
-    public class NamesArrayList : INamesArrayList
+    public NamesArrayList(IGenerateNames nameGenerator)
     {
-        private readonly IGenerateNames _nameGenerator;
+        _nameGenerator = nameGenerator ?? throw new ArgumentNullException(nameof(nameGenerator));
+    }
 
-        public NamesArrayList(IGenerateNames nameGenerator)
-        {
-            _nameGenerator = nameGenerator ?? throw new ArgumentNullException(nameof(nameGenerator));
-        }
+    public ArrayList GenerateNames(int nameLength = 10, int numberOfNames = 10)
+    {
+        var namesArrayList = new ArrayList();
+        namesArrayList.AddRange(_nameGenerator.GetNames(nameLength, numberOfNames));
 
-        public ArrayList GenerateNames(int nameLength = 10, int numberOfNames = 10)
-        {
-            var namesArrayList = new ArrayList();
-            namesArrayList.AddRange(_nameGenerator.GetNames(nameLength, numberOfNames));
-
-            return namesArrayList;
-        }
-
+        return namesArrayList;
     }
 
 }

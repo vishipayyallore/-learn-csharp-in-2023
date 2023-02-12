@@ -1,11 +1,8 @@
 ﻿using System.Collections;
 
-namespace NamesArrayListLib.Interfaces
+namespace NamesArrayListLib.Interfaces;
+
+public interface INamesArrayList
 {
-
-    public interface INamesArrayList
-    {
-        ArrayList GenerateNames(int nameLength = 10, int numberOfNames = 10);
-    }
-
+    ArrayList GenerateNames(int nameLength = 10, int numberOfNames = 10);
 }
