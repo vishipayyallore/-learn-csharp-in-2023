@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <Using Include="System.Console" Static="true" />
+    <Using Include="System.Runtime.InteropServices.JavaScript.JSType" Static="true" />
   </ItemGroup>
 
 </Project>

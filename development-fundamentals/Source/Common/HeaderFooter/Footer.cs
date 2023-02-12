@@ -1,20 +1,17 @@
 ﻿using HeaderFooter.Interfaces;
 
-namespace HeaderFooter
+namespace HeaderFooter;
+
+public class Footer : IFooter
 {
 
-    public class Footer : IFooter
+    public void DisplayFooter(char footer, int length = 100, ConsoleColor foregroundColor = ConsoleColor.Yellow)
     {
+        ForegroundColor = foregroundColor;
 
-        public void DisplayFooter(char footer, int length = 100, ConsoleColor foregroundColor = ConsoleColor.Yellow)
-        {
-            ForegroundColor = ConsoleColor.Yellow;
+        WriteLine($"\n{new string(footer, length)}\n");
 
-            WriteLine($"\n{new string(footer, length)}\n");
-
-            ResetColor();
-        }
-
+        ResetColor();
     }
 
 }
