@@ -1,9 +1,6 @@
-﻿namespace QuickPoc.Interfaces
+﻿namespace QuickPoc.Interfaces;
+
+public interface IDemoProgram
 {
-
-    public interface IDemoProgram
-    {
-        void Run();
-    }
-
+    void Run();
 }
