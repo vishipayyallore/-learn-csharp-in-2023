@@ -1,21 +1,19 @@
 ﻿using QuickPoc.Set1;
 
-namespace QuickPoc.Runners
+namespace QuickPoc.Runners;
+
+public class SetOneRunner
 {
-    public class SetOneRunner
+    private readonly ProgramRunner _programRunner;
+
+    public SetOneRunner(ProgramRunner programRunner)
     {
-        private readonly ProgramRunner _programRunner;
+        _programRunner = programRunner ?? throw new ArgumentNullException(nameof(programRunner));
+    }
 
-        public SetOneRunner(ProgramRunner programRunner)
-        {
-            _programRunner = programRunner ?? throw new ArgumentNullException(nameof(programRunner));
-        }
-
-        public void Run()
-        {
-            _programRunner.Run(new EnvironmentDetials(), "Environment Details");
-        }
-
+    public void Run()
+    {
+        _programRunner.Run(new EnvironmentDetials(), "Environment Details");
     }
 
 }
