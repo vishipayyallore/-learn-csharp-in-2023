@@ -12,7 +12,6 @@ var player = new Player(name);
 
 WriteLine("Welcome {0} to A1 Simple Game!", player.Name);
 
-
 ForegroundColor = ConsoleColor.Yellow;
 WriteLine("\nThank You. Press any key ...");
 
