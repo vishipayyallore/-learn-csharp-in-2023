@@ -1,4 +1,4 @@
-﻿namespace A1SimpleGame.src.Text;
+﻿namespace A1SimpleGame.Src.Text;
 
 public abstract partial class Language
 {
