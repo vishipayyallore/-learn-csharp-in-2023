@@ -9,14 +9,13 @@ WriteLine(SpecifyText.Language.ChooseYourName);
 
 var name = ReadLine();
 
-name = string.IsNullOrWhiteSpace(name) ? "No Name" : name;
+name = string.IsNullOrWhiteSpace(name) ? SpecifyText.Language.DefaultName : name;
 
 var player = new Player(name);
 
-WriteLine("Welcome {0} to A1 Simple Game!", player.Name);
+WriteLine(SpecifyText.Language.Welcome, player.Name);
 
 ForegroundColor = ConsoleColor.Yellow;
-WriteLine("\nThank You. Press any key ...");
+WriteLine("\nThank You. Visit Again!");
 
 ResetColor();
-ReadKey();
