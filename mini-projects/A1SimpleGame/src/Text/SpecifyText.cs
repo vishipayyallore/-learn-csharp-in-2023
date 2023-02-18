@@ -8,7 +8,7 @@ public static class SpecifyText
     {
         get
         {
-            if (_language == null)
+            if (_language is null)
             {
                 throw new Exception("No language loaded.");
             }
