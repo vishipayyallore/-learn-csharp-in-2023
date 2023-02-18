@@ -1,11 +1,11 @@
 ﻿using A1SimpleGame.src.Characters;
 using A1SimpleGame.src.Text;
 
-var language = new English();
+SpecifyText.LoadLanguage(new English());
 
 ForegroundColor = ConsoleColor.Cyan;
 
-WriteLine(language.ChooseYourName);
+WriteLine(SpecifyText.Language.ChooseYourName);
 
 var name = ReadLine();
 
