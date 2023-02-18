@@ -1,5 +1,5 @@
-﻿using A1SimpleGame.src.Characters;
-using A1SimpleGame.src.Text;
+﻿using A1SimpleGame.Src.Characters;
+using A1SimpleGame.Src.Text;
 
 SpecifyText.LoadLanguage(new English());
 

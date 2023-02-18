@@ -1,4 +1,4 @@
-﻿namespace A1SimpleGame.src.Characters;
+﻿namespace A1SimpleGame.Src.Characters;
 
 public class Player : Character
 {
