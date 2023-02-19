@@ -7,4 +7,8 @@ public abstract partial class Language
     public string ChooseYourName { get; protected set; } = "";
 
     public string DefaultName { get; protected set; } = "";
+
+    public string DefaultRoomName { get; protected set; } = "";
+
+    public string DefaultRoomDescription { get; protected set; } = "";
 }
