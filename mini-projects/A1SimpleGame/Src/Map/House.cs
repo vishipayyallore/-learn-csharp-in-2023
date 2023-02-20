@@ -12,6 +12,8 @@ public partial class House
 
     public int Height { get; set; }
 
+    public Room[] Rooms { get; private set; } = Array.Empty<Room>();
+
     public House(Player player)
     {
         Player = player;

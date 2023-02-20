@@ -10,6 +10,10 @@ public class English : Language
         ChooseYourName = "Hello, what is your name?";
 
         DefaultName = "No Name";
+
+        DefaultRoomName = "Room {0} ({1},{2})";
+
+        DefaultRoomDescription = " You are in a {0} room with doors to the {1}.";
     }
 
 }
