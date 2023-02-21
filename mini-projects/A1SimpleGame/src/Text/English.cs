@@ -14,6 +14,8 @@ public class English : Language
         DefaultRoomName = "Room {0} ({1},{2})";
 
         DefaultRoomDescription = " You are in a {0} room with doors to the {1}.";
+
+        ActionError = "You can't do that.";
     }
 
 }
