@@ -20,6 +20,10 @@ public class English : Language
         Go = "Go";
 
         GoError = "You can't go that way.";
+
+        WhatToDo = "What do you want to do?";
+
+        Quit = "quit";
     }
 
 }

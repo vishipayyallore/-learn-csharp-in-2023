@@ -17,4 +17,8 @@ public abstract partial class Language
     public string Go { get; protected set; } = "";
 
     public string GoError { get; protected set; } = "";
+
+    public string WhatToDo { get; protected set; } = "";
+    
+    public string Quit { get; protected set; } = "";
 }
