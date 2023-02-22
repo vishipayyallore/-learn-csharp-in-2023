@@ -11,7 +11,7 @@ public class Go : Action
 
     public Go(House house)
     {
-        _house = house;
+        _house = house ?? throw new ArgumentNullException(nameof(house));
     }
 
     public override void Execute(string[] args)
