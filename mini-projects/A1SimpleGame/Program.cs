@@ -29,12 +29,20 @@ while (executing)
     if (lastRoom != house!.CurrentRoom)
     {
         WriteLine(house?.CurrentRoom?.ToString());
-        lastRoom= house!.CurrentRoom;
+        lastRoom = house!.CurrentRoom;
     }
 
     WriteLine(SpecifyText.Language.WhatToDo);
 
     var input = ReadLine()?.ToLower();
+    if (input == SpecifyText.Language.Quit)
+    {
+        executing = false;
+    }
+    else
+    {
+        AActions.Instance.Execute(input?.Split(" ")!);
+    }
 }
 
 ForegroundColor = ConsoleColor.Yellow;
