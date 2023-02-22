@@ -16,6 +16,10 @@ public class English : Language
         DefaultRoomDescription = " You are in a {0} room with doors to the {1}.";
 
         ActionError = "You can't do that.";
+
+        Go = "Go";
+
+        GoError = "You can't go that way.";
     }
 
 }
