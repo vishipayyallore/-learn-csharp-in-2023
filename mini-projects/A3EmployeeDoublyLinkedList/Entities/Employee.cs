@@ -10,10 +10,7 @@ public class Employee
 
     public int SingleDigitSumOfId => GetSingleDigitSumOfId();
 
-    public override string ToString()
-    {
-        return $"Id: {Id} => {SingleDigitSumOfId} | Name: {Name} => {IsNamePalindrome}";
-    }
+    public override string ToString() => $"Id: {Id} => SingleDigitSumOfId: {SingleDigitSumOfId} | Name: {Name} => IsNamePalindrome: {IsNamePalindrome}";
 
     private bool CheckPalindrome()
     {
@@ -21,7 +18,7 @@ public class Employee
 
         for (int i = 0; i < Name.Length / 2; i++)
         {
-            if (Name[i] != Name[Name.Length - 1 - i])
+            if (Name[i] != Name[(Name.Length - 1) - i])
             {
                 isPalindrome = false;
                 break;
@@ -50,4 +47,5 @@ public class Employee
 
         return sum;
     }
+
 }
