@@ -1,4 +1,6 @@
-﻿namespace A3EmployeeDoublyLinkedList.DLL;
+﻿using A3EmployeeDoublyLinkedList.Entities;
+
+namespace A3EmployeeDoublyLinkedList.DLL;
 
 public class DoublyLinkedList
 {
@@ -19,7 +21,7 @@ public class DoublyLinkedList
 
     public bool IsEmpty() => size == 0;
 
-    public void AddLast(int element)
+    public void AddLast(Employee element)
     {
         Node newest = new(element, default, default);
 
@@ -46,7 +48,7 @@ public class DoublyLinkedList
 
         while (p is not null)
         {
-            Write(p.Element + "-->");
+            WriteLine(p.Element + " --> ");
 
             p = p.Next;
         }

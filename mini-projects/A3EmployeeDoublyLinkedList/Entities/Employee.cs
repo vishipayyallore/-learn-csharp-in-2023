@@ -10,6 +10,11 @@ public class Employee
 
     public int SingleDigitSumOfId => GetSingleDigitSumOfId();
 
+    public override string ToString()
+    {
+        return $"{Id} => {SingleDigitSumOfId} | {Name} => {IsNamePalindrome}";
+    }
+
     private bool CheckPalindrome()
     {
         bool isPalindrome = true;

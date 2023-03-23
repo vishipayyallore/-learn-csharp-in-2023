@@ -1,14 +1,16 @@
-﻿namespace A3EmployeeDoublyLinkedList.DLL;
+﻿using A3EmployeeDoublyLinkedList.Entities;
+
+namespace A3EmployeeDoublyLinkedList.DLL;
 
 public class Node
 {
-    public int Element;
+    public Employee Element;
 
     public Node? Next;
 
     public Node? Previous;
 
-    public Node(int element, Node? next, Node? previous)
+    public Node(Employee element, Node? next, Node? previous)
     {
         Element = element;
 
