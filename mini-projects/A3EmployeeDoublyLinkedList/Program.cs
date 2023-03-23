@@ -1,4 +1,4 @@
-﻿using A3EmployeeDoublyLinkedList;
+﻿using A3EmployeeDoublyLinkedList.DLL;
 
 ForegroundColor = ConsoleColor.Yellow;
 

@@ -1,4 +1,4 @@
-﻿namespace A3EmployeeDoublyLinkedList;
+﻿namespace A3EmployeeDoublyLinkedList.DLL;
 
 public class DoublyLinkedList
 {
@@ -31,9 +31,9 @@ public class DoublyLinkedList
         else
         {
             tail!.Next = newest;
-            
+
             newest.Previous = tail;
-            
+
             tail = newest;
         }
 

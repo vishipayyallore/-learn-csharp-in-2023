@@ -1,4 +1,4 @@
-﻿namespace A3EmployeeDoublyLinkedList;
+﻿namespace A3EmployeeDoublyLinkedList.DLL;
 
 public class Node
 {
