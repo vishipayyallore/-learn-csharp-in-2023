@@ -21,8 +21,8 @@ employees.ForEach(employee =>
 });
 
 ForegroundColor = ConsoleColor.Yellow;
-WriteLine("\nDisplaying Employees from Doubly Linked List");
 WriteLine("Size: " + doublyLinkedList.Length());
+WriteLine("\nDisplaying Employees from Doubly Linked List");
 doublyLinkedList.Display();
 
 WriteLine("\nPress any key ...");
