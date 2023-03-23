@@ -16,14 +16,17 @@ List<Employee> employees = new()
 WriteLine("Adding Employees to Doubly Linked List");
 employees.ForEach(employee =>
 {
-    WriteLine($"Id: {employee.Id} | {employee.Name}");
+    WriteLine($"Id: {employee.Id} | Name: {employee.Name}");
     doublyLinkedList.AddLast(employee);
 });
 
+ForegroundColor = ConsoleColor.Blue;
+WriteLine("\nNumber of Elements inside Doubly Linked List: " + doublyLinkedList.Length());
+
 ForegroundColor = ConsoleColor.Yellow;
-WriteLine("Size: " + doublyLinkedList.Length());
 WriteLine("\nDisplaying Employees from Doubly Linked List");
 doublyLinkedList.Display();
 
+ResetColor();
 WriteLine("\nPress any key ...");
 ReadKey();

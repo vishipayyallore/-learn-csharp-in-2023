@@ -12,7 +12,7 @@ public class Employee
 
     public override string ToString()
     {
-        return $"{Id} => {SingleDigitSumOfId} | {Name} => {IsNamePalindrome}";
+        return $"Id: {Id} => {SingleDigitSumOfId} | Name: {Name} => {IsNamePalindrome}";
     }
 
     private bool CheckPalindrome()
