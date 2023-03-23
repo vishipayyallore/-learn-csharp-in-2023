@@ -15,6 +15,8 @@ l.AddLast(3);
 l.Display();
 WriteLine("Size: " + l.Length());
 
+// WriteLine(SingleDigitSum(9991));
+
 WriteLine("\n\nPress any key ...");
 ReadKey();
 

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace A3EmployeeDoublyLinkedList.Entities;
+﻿namespace A3EmployeeDoublyLinkedList.Entities;
 
 public class Employee
 {
@@ -13,6 +7,8 @@ public class Employee
     public string Name { get; set; } = string.Empty;
 
     public bool IsNamePalindrome => CheckPalindrome();
+
+    public int SingleDigitSumOfId => GetSingleDigitSumOfId();
 
     private bool CheckPalindrome()
     {
@@ -28,5 +24,25 @@ public class Employee
         }
 
         return isPalindrome;
+    }
+
+    private int GetSingleDigitSumOfId()
+    {
+        int sum = Id;
+
+        while (Id > 9)
+        {
+            sum = 0;
+
+            while (Id > 0)
+            {
+                sum += Id % 10;
+                Id /= 10;
+            }
+
+            Id = sum;
+        }
+
+        return sum;
     }
 }
