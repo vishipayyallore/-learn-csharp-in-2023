@@ -349,3 +349,4 @@ MigrationBackup/
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
 mini-projects/A3EmployeeDoublyLinkedList.zip
+samples/day1/.env
