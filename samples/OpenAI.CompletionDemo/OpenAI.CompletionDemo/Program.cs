@@ -3,6 +3,13 @@
 
 using Azure;
 using Azure.AI.OpenAI;
+using Microsoft.Extensions.Configuration;
+
+var config = new ConfigurationBuilder()
+    .SetBasePath(Directory.GetCurrentDirectory())
+    .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+    .AddUserSecrets<Program>()
+    .Build();
 
 string key = "Your_OPEN_API_Key";
 var openAiEndPoint = new Uri("https://Your-azure-openai.openai.azure.com/");
