@@ -4,10 +4,11 @@ namespace ArrayAlgosDemo;
 
 public static class TwoNumbersSum
 {
-    public static void ShowTwoNumberSumDemo()
+    public static void ShowDemo()
     {
         ForegroundColor = ConsoleColor.DarkCyan;
         WriteLine("***** Two Numbers Sum *****");
+
         int[] outputArray = TwoNumberSum(new int[] { 3, 5, -4, 8, 11, 1, -1, 6 }, 10);
 
         WriteLine($"Output: [{string.Join(", ", Helpers.ConvertIntToStringArray(outputArray))}]");
@@ -15,7 +16,6 @@ public static class TwoNumbersSum
         WriteLine("----- Two Numbers Sum -----");
         ResetColor();
     }
-
 
     private static int[] TwoNumberSum(int[] inputNumbers, int sumToMatch)
     {
@@ -38,5 +38,4 @@ public static class TwoNumbersSum
 
         return Array.Empty<int>();
     }
-
 }

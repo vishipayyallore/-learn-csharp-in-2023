@@ -1,5 +1,3 @@
-﻿ShowTwoNumberSumDemo();
+﻿using ArrayAlgosDemo;
 
-
-
-
+TwoNumbersSum.ShowDemo();
