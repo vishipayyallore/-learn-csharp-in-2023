@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.33906.173
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A0C4EF22-B02F-4FB7-AA7A-04183D8D0C0D}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "documentation", "documentation", "{5CD12F94-F27B-4AFA-9CAA-7E411B38C40B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "images", "images", "{509EBCD5-469D-419E-A046-8A9E901DDC0A}"
+	ProjectSection(SolutionItems) = preProject
+		documentation\images\B.txt = documentation\images\B.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{CF33E4FE-5EF6-42A5-8204-B03D2AC31982}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{34F4B8F0-B640-47D4-8717-D1CFDBB96207}"
+	ProjectSection(SolutionItems) = preProject
+		tests\A.txt = tests\A.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "easy", "easy", "{73A09A2A-5EA6-41E4-BF5B-557943091CB5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayAlgosDemo", "src\easy\ArrayAlgosDemo\ArrayAlgosDemo.csproj", "{E075291A-E4C6-46D6-A900-32F5C73D4F4D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E075291A-E4C6-46D6-A900-32F5C73D4F4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E075291A-E4C6-46D6-A900-32F5C73D4F4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E075291A-E4C6-46D6-A900-32F5C73D4F4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E075291A-E4C6-46D6-A900-32F5C73D4F4D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{509EBCD5-469D-419E-A046-8A9E901DDC0A} = {5CD12F94-F27B-4AFA-9CAA-7E411B38C40B}
+		{73A09A2A-5EA6-41E4-BF5B-557943091CB5} = {CF33E4FE-5EF6-42A5-8204-B03D2AC31982}
+		{E075291A-E4C6-46D6-A900-32F5C73D4F4D} = {73A09A2A-5EA6-41E4-BF5B-557943091CB5}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3BCC70C2-7F69-403B-908C-250463F4EA0E}
+	EndGlobalSection
+EndGlobal
