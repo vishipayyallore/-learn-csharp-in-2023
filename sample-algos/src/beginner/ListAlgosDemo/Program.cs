@@ -1,7 +1,4 @@
-﻿using ListAlgosDemo;
-using System.Data.Common;
-
-ForegroundColor = ConsoleColor.DarkCyan;
+﻿ForegroundColor = ConsoleColor.DarkCyan;
 
 var color = "DarkCyan";
 Enum.TryParse<ConsoleColor>(color?.TrimEnd(), out ConsoleColor res);
