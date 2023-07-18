@@ -11,7 +11,7 @@ public static class TwoNumbersSum
 
         int[] outputArray = TwoNumberSum(new int[] { 3, 5, -4, 8, 11, 1, -1, 6 }, 10);
 
-        WriteLine($"Output: [{string.Join(", ", Helpers.ConvertIntToStringArray(outputArray))}]");
+        WriteLine($"Output: [{Helpers.ConvertIntArrayToString(outputArray)}]");
 
         WriteLine("----- Two Numbers Sum -----");
         ResetColor();
@@ -19,15 +19,14 @@ public static class TwoNumbersSum
 
     private static int[] TwoNumberSum(int[] inputNumbers, int sumToMatch)
     {
-        WriteLine($"Input Array: [{string.Join(", ", Helpers.ConvertIntToStringArray(inputNumbers))}]");
+        WriteLine($"Input Array: [{Helpers.ConvertIntArrayToString(inputNumbers)}]");
         WriteLine($"Sum to Match: {sumToMatch}");
 
         for (int i = 0; i < inputNumbers.Length - 1; i++)
         {
             for (int j = i + 1; j < inputNumbers.Length; j++)
             {
-                // Uncomment this line for Debugging
-                // WriteLine($"{i + 1}. {inputNumbers[i]} + {inputNumbers[j]}");
+                // WriteLine($"{i + 1}. {inputNumbers[i]} + {inputNumbers[j]}"); // Uncomment this line for Debugging
 
                 if ((inputNumbers[i] + inputNumbers[j]) == sumToMatch)
                 {
