@@ -8,6 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\common\HeaderFooter\HeaderFooter.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Using Include="System.Console" Static="true" />
   </ItemGroup>
 
