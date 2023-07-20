@@ -1,5 +1,4 @@
 ﻿using HeaderFooter;
-using HeaderFooter.Interfaces;
 using ListAlgosDemo.Common;
 
 namespace ListAlgosDemo.Alogs;
@@ -7,8 +6,8 @@ namespace ListAlgosDemo.Alogs;
 public static class ValidateSubsequence
 {
 
-    private static readonly IHeader _header = new Header();
-    private static readonly IFooter _footer = new Footer();
+    private static readonly Header _header = new();
+    private static readonly Footer _footer = new();
 
     public static void ShowDemo()
     {
