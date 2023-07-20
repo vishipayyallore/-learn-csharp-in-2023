@@ -1,6 +1,6 @@
 ﻿using ArrayAlgosDemo.Common;
 
-namespace ArrayAlgosDemo;
+namespace ArrayAlgosDemo.Alogs;
 
 public static class TwoNumbersSum
 {
@@ -28,7 +28,7 @@ public static class TwoNumbersSum
             {
                 // WriteLine($"{i + 1}. {inputNumbers[i]} + {inputNumbers[j]}"); // Uncomment this line for Debugging
 
-                if ((inputNumbers[i] + inputNumbers[j]) == sumToMatch)
+                if (inputNumbers[i] + inputNumbers[j] == sumToMatch)
                 {
                     return new[] { inputNumbers[i], inputNumbers[j] };
                 }

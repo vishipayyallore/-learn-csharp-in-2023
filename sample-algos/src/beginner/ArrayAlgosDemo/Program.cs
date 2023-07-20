@@ -1,3 +1,3 @@
-﻿using ArrayAlgosDemo;
+﻿using ArrayAlgosDemo.Alogs;
 
 TwoNumbersSum.ShowDemo();
