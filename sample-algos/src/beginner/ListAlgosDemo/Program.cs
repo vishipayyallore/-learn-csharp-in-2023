@@ -1,4 +1,4 @@
-﻿using ListAlgosDemo;
+﻿using ListAlgosDemo.Alogs;
 
 ValidateSubsequence.ShowDemo();
 

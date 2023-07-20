@@ -2,7 +2,7 @@
 using HeaderFooter.Interfaces;
 using ListAlgosDemo.Common;
 
-namespace ListAlgosDemo;
+namespace ListAlgosDemo.Alogs;
 
 public static class ValidateSubsequence
 {
@@ -31,7 +31,7 @@ public static class ValidateSubsequence
         WriteLine($"Inputs: {Helpers.ConvertIntegerListToString(numbersList)}");
         WriteLine($"Sequence Inputs: {Helpers.ConvertIntegerListToString(sequence)}");
 
-        if (sequence.Count > numbersList.Count || (sequence.Count != sequence.ToHashSet().Count && sequence.ToHashSet().Count != 1))
+        if (sequence.Count > numbersList.Count || sequence.Count != sequence.ToHashSet().Count && sequence.ToHashSet().Count != 1)
         {
             return false;
         }
