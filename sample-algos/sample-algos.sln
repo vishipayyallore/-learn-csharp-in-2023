@@ -46,7 +46,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ListAlgosDemo", "src\beginn
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "common", "common", "{4131A906-F6AD-4C61-86EE-E228B302D8B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleDemos", "src\common\SimpleDemos\SimpleDemos.csproj", "{AD5A9ABC-0084-44AF-B74C-6FE989A8B040}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleDemos", "src\common\SimpleDemos\SimpleDemos.csproj", "{AD5A9ABC-0084-44AF-B74C-6FE989A8B040}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HeaderFooter", "src\common\HeaderFooter\HeaderFooter.csproj", "{53479E3B-40A9-4C93-84B9-45605578C47C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -66,6 +68,10 @@ Global
 		{AD5A9ABC-0084-44AF-B74C-6FE989A8B040}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD5A9ABC-0084-44AF-B74C-6FE989A8B040}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AD5A9ABC-0084-44AF-B74C-6FE989A8B040}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53479E3B-40A9-4C93-84B9-45605578C47C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53479E3B-40A9-4C93-84B9-45605578C47C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53479E3B-40A9-4C93-84B9-45605578C47C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53479E3B-40A9-4C93-84B9-45605578C47C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -80,6 +86,7 @@ Global
 		{349FAB77-B19C-429B-BE4A-CF25E71D19CF} = {73A09A2A-5EA6-41E4-BF5B-557943091CB5}
 		{4131A906-F6AD-4C61-86EE-E228B302D8B5} = {CF33E4FE-5EF6-42A5-8204-B03D2AC31982}
 		{AD5A9ABC-0084-44AF-B74C-6FE989A8B040} = {4131A906-F6AD-4C61-86EE-E228B302D8B5}
+		{53479E3B-40A9-4C93-84B9-45605578C47C} = {4131A906-F6AD-4C61-86EE-E228B302D8B5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3BCC70C2-7F69-403B-908C-250463F4EA0E}

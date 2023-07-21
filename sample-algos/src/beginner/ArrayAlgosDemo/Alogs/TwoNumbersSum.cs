@@ -1,20 +1,26 @@
 ﻿using ArrayAlgosDemo.Common;
+using HeaderFooter;
 
-namespace ArrayAlgosDemo;
+namespace ArrayAlgosDemo.Alogs;
 
 public static class TwoNumbersSum
 {
+    private static readonly Header _header = new();
+    private static readonly Footer _footer = new();
+
     public static void ShowDemo()
     {
+        _header.DisplayHeader('=', "Two Numbers Sum");
+
         ForegroundColor = ConsoleColor.DarkCyan;
-        WriteLine("***** Two Numbers Sum *****");
 
         int[] outputArray = TwoNumberSum(new int[] { 3, 5, -4, 8, 11, 1, -1, 6 }, 10);
 
         WriteLine($"Output: [{Helpers.ConvertIntArrayToString(outputArray)}]");
 
-        WriteLine("----- Two Numbers Sum -----");
         ResetColor();
+
+        _footer.DisplayFooter('-');
     }
 
     private static int[] TwoNumberSum(int[] inputNumbers, int sumToMatch)
@@ -28,7 +34,7 @@ public static class TwoNumbersSum
             {
                 // WriteLine($"{i + 1}. {inputNumbers[i]} + {inputNumbers[j]}"); // Uncomment this line for Debugging
 
-                if ((inputNumbers[i] + inputNumbers[j]) == sumToMatch)
+                if (inputNumbers[i] + inputNumbers[j] == sumToMatch)
                 {
                     return new[] { inputNumbers[i], inputNumbers[j] };
                 }

@@ -1,21 +1,28 @@
-﻿using ListAlgosDemo.Common;
+﻿using HeaderFooter;
+using ListAlgosDemo.Common;
 
-namespace ListAlgosDemo;
+namespace ListAlgosDemo.Alogs;
 
 public static class ValidateSubsequence
 {
+
+    private static readonly Header _header = new();
+    private static readonly Footer _footer = new();
+
     public static void ShowDemo()
     {
-        ForegroundColor = ConsoleColor.Yellow;
-        WriteLine("***** Validate Subsequence *****");
+        _header.DisplayHeader('=', "Validate Subsequence");
+
+        ForegroundColor = ConsoleColor.DarkCyan;
 
         // var results = IsValidSubsequence(new List<int> { 1, 2, 3, 4 }, new List<int> { 1, 3 });
         var results = IsValidSubsequence(new List<int> { 5, 1, 22, 25, 6, -1, 8, 10 }, new List<int> { 1, 6, -1, 10 });
         // var results = IsValidSubsequence(new List<int> { 5, 1, 22, 25, 6, -1, 8, 10 }, new List<int> { 5, 1, 22, 22, 6, -1, 8, 10 });
         WriteLine($"Is Valid Subsequence: {results}");
 
-        WriteLine("----- Validate Subsequence -----");
         ResetColor();
+
+        _footer.DisplayFooter('-');
     }
 
     private static bool IsValidSubsequence(List<int> numbersList, List<int> sequence)
@@ -23,7 +30,7 @@ public static class ValidateSubsequence
         WriteLine($"Inputs: {Helpers.ConvertIntegerListToString(numbersList)}");
         WriteLine($"Sequence Inputs: {Helpers.ConvertIntegerListToString(sequence)}");
 
-        if (sequence.Count > numbersList.Count || (sequence.Count != sequence.ToHashSet().Count && sequence.ToHashSet().Count != 1))
+        if (sequence.Count > numbersList.Count || sequence.Count != sequence.ToHashSet().Count && sequence.ToHashSet().Count != 1)
         {
             return false;
         }
