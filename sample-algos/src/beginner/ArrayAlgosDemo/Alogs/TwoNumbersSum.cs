@@ -10,11 +10,23 @@ public static class TwoNumbersSum
 
     public static void ShowDemo()
     {
-        _header.DisplayHeader('=', "Two Numbers Sum");
+        _header.DisplayHeader('=', "Two Numbers Sum - V1");
 
         ForegroundColor = ConsoleColor.DarkCyan;
 
-        int[] outputArray = TwoNumberSum(new int[] { 3, 5, -4, 8, 11, 1, -1, 6 }, 10);
+        int[] outputArray = TwoNumberSumV1(new int[] { 3, 5, -4, 8, 11, 1, -1, 6 }, 10);
+
+        WriteLine($"Output: [{Helpers.ConvertIntArrayToString(outputArray)}]");
+
+        ResetColor();
+
+        _footer.DisplayFooter('-');
+
+        _header.DisplayHeader('=', "Two Numbers Sum - V2");
+
+        ForegroundColor = ConsoleColor.DarkCyan;
+
+        outputArray = TwoNumberSumV2(new int[] { 3, 5, -4, 8, 11, 1, -1, 6 }, 10);
 
         WriteLine($"Output: [{Helpers.ConvertIntArrayToString(outputArray)}]");
 
@@ -23,7 +35,7 @@ public static class TwoNumbersSum
         _footer.DisplayFooter('-');
     }
 
-    private static int[] TwoNumberSum(int[] inputNumbers, int sumToMatch)
+    private static int[] TwoNumberSumV1(int[] inputNumbers, int sumToMatch)
     {
         WriteLine($"Input Array: [{Helpers.ConvertIntArrayToString(inputNumbers)}]");
         WriteLine($"Sum to Match: {sumToMatch}");
@@ -39,6 +51,28 @@ public static class TwoNumbersSum
                     return new[] { inputNumbers[i], inputNumbers[j] };
                 }
             }
+        }
+
+        return Array.Empty<int>();
+    }
+
+    private static int[] TwoNumberSumV2(int[] inputNumbers, int sumToMatch)
+    {
+        WriteLine($"Input Array: [{Helpers.ConvertIntArrayToString(inputNumbers)}]");
+        WriteLine($"Sum to Match: {sumToMatch}");
+
+        HashSet<int> visited = new();
+
+        for (int i = 0; i < inputNumbers.Length; i++)
+        {
+            int value = sumToMatch - inputNumbers[i];
+
+            if (visited.Contains(value))
+            {
+                return new[] { inputNumbers[i], value };
+            }
+
+            visited.Add(inputNumbers[i]);
         }
 
         return Array.Empty<int>();
