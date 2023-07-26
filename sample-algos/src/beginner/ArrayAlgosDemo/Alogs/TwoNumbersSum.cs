@@ -37,8 +37,7 @@ public static class TwoNumbersSum
 
     private static int[] TwoNumberSumV1(int[] inputNumbers, int sumToMatch)
     {
-        WriteLine($"Input Array: [{Helpers.ConvertIntArrayToString(inputNumbers)}]");
-        WriteLine($"Sum to Match: {sumToMatch}");
+        DisplayInputAndSum(inputNumbers, sumToMatch); ;
 
         for (int i = 0; i < inputNumbers.Length - 1; i++)
         {
@@ -56,8 +55,7 @@ public static class TwoNumbersSum
 
     private static int[] TwoNumberSumV2(int[] inputNumbers, int sumToMatch)
     {
-        WriteLine($"Input Array: [{Helpers.ConvertIntArrayToString(inputNumbers)}]");
-        WriteLine($"Sum to Match: {sumToMatch}");
+        DisplayInputAndSum(inputNumbers, sumToMatch);
 
         HashSet<int> visited = new();
 
@@ -75,4 +73,11 @@ public static class TwoNumbersSum
 
         return Array.Empty<int>();
     }
+
+    private static void DisplayInputAndSum(int[] inputNumbers, int sumToMatch)
+    {
+        WriteLine($"Input Array: [{Helpers.ConvertIntArrayToString(inputNumbers)}]");
+        WriteLine($"Sum to Match: {sumToMatch}");
+    }
+
 }
