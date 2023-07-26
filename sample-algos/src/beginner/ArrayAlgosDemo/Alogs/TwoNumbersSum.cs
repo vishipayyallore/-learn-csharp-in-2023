@@ -7,26 +7,26 @@ public static class TwoNumbersSum
 {
     private static readonly Header _header = new();
     private static readonly Footer _footer = new();
+    private static readonly string[] titles = { "Two Numbers Sum - V1", "Two Numbers Sum - V2" };
 
     public static void ShowDemo()
     {
-        _header.DisplayHeader('=', "Two Numbers Sum - V1");
+        var inputNumbers = new int[] { 3, 5, -4, 8, 11, 1, -1, 6 };
+        var sumToMatch = 10;
 
-        ForegroundColor = ConsoleColor.DarkCyan;
+        ExecuteTwoNumberSum(TwoNumberSumV1, inputNumbers, sumToMatch, titles[0], ConsoleColor.DarkCyan);
 
-        int[] outputArray = TwoNumberSumV1(new int[] { 3, 5, -4, 8, 11, 1, -1, 6 }, 10);
+        ExecuteTwoNumberSum(TwoNumberSumV2, inputNumbers, sumToMatch, titles[1], ConsoleColor.DarkYellow);
+    }
 
-        WriteLine($"Output: [{Helpers.ConvertIntArrayToString(outputArray)}]");
+    private static void ExecuteTwoNumberSum(Func<int[], int, int[]> twoNumberSumMethod,
+        int[] inputNumbers, int sumToMatch, string title, ConsoleColor consoleColor)
+    {
+        _header.DisplayHeader('=', title);
 
-        ResetColor();
+        ForegroundColor = consoleColor;
 
-        _footer.DisplayFooter('-');
-
-        _header.DisplayHeader('=', "Two Numbers Sum - V2");
-
-        ForegroundColor = ConsoleColor.DarkCyan;
-
-        outputArray = TwoNumberSumV2(new int[] { 3, 5, -4, 8, 11, 1, -1, 6 }, 10);
+        int[] outputArray = twoNumberSumMethod(inputNumbers, sumToMatch);
 
         WriteLine($"Output: [{Helpers.ConvertIntArrayToString(outputArray)}]");
 
@@ -44,8 +44,6 @@ public static class TwoNumbersSum
         {
             for (int j = i + 1; j < inputNumbers.Length; j++)
             {
-                // WriteLine($"{i + 1}. {inputNumbers[i]} + {inputNumbers[j]}"); // Uncomment this line for Debugging
-
                 if (inputNumbers[i] + inputNumbers[j] == sumToMatch)
                 {
                     return new[] { inputNumbers[i], inputNumbers[j] };
