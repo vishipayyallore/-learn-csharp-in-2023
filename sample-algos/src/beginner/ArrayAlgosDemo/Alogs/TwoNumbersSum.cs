@@ -14,17 +14,17 @@ public static class TwoNumbersSum
         var inputNumbers = new int[] { 3, 5, -4, 8, 11, 1, -1, 6 };
         var sumToMatch = 10;
 
-        ExecuteTwoNumberSum(TwoNumberSumV1, inputNumbers, sumToMatch, titles[0], ConsoleColor.DarkCyan);
+        ExecuteTwoNumberSum(TwoNumberSumV1, inputNumbers, sumToMatch, titles[0], ConsoleColorStyle.DarkCyan);
 
-        ExecuteTwoNumberSum(TwoNumberSumV2, inputNumbers, sumToMatch, titles[1], ConsoleColor.DarkYellow);
+        ExecuteTwoNumberSum(TwoNumberSumV2, inputNumbers, sumToMatch, titles[1], ConsoleColorStyle.DarkYellow);
     }
 
     private static void ExecuteTwoNumberSum(Func<int[], int, int[]> twoNumberSumMethod,
-        int[] inputNumbers, int sumToMatch, string title, ConsoleColor consoleColor)
+        int[] inputNumbers, int sumToMatch, string title, ConsoleColorStyle consoleColor)
     {
         _header.DisplayHeader('=', title);
 
-        ForegroundColor = consoleColor;
+        ForegroundColor = ConsoleColorStyleHelper.GetConsoleForegroundColor(consoleColor);
 
         int[] outputArray = twoNumberSumMethod(inputNumbers, sumToMatch);
 
