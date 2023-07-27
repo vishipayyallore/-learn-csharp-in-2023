@@ -2,7 +2,11 @@
 
 public enum ConsoleColorStyle
 {
-    DarkGreen = 1,
+    DarkYellow = 1,
 
-    DarkMagenta = 2
+    DarkCyan = 2,
+
+    DarkGreen = 3,
+
+    DarkMagenta = 4
 }

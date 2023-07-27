@@ -15,18 +15,18 @@ public static class TwoNumbersSumV2
         var sumToMatch = 10;
 
         // Using Func<T> version for TwoNumberSumV1 logic
-        ExecuteTwoNumberSum(inputNumbers, sumToMatch, TwoNumberSumV1, titles[0], ConsoleColor.DarkGreen);
+        ExecuteTwoNumberSum(inputNumbers, sumToMatch, FindTwoNumbersSumBruteForce, titles[0], ConsoleColorStyle.DarkGreen);
 
         // Using Func<T> version for TwoNumberSumV2 logic
-        ExecuteTwoNumberSum(inputNumbers, sumToMatch, TwoNumberSumV2, titles[1], ConsoleColor.DarkMagenta);
+        ExecuteTwoNumberSum(inputNumbers, sumToMatch, FindTwoNumbersSumHashSet, titles[1], ConsoleColorStyle.DarkMagenta);
     }
 
     private static void ExecuteTwoNumberSum(int[] inputNumbers, int sumToMatch, Func<int[], int, int[]> twoNumberSumFunc,
-        string title, ConsoleColor consoleColor)
+        string title, ConsoleColorStyle consoleColor)
     {
         _header.DisplayHeader('=', title);
 
-        Console.ForegroundColor = consoleColor;
+        Console.ForegroundColor = ConsoleColorStyleHelper.GetConsoleForegroundColor(consoleColor);
 
         // Common Logic A: Display input and sum
         DisplayInputAndSum(inputNumbers, sumToMatch);
@@ -42,7 +42,7 @@ public static class TwoNumbersSumV2
         _footer.DisplayFooter('-');
     }
 
-    private static int[] TwoNumberSumV1(int[] inputNumbers, int sumToMatch)
+    private static int[] FindTwoNumbersSumBruteForce(int[] inputNumbers, int sumToMatch)
     {
         for (int i = 0; i < inputNumbers.Length - 1; i++)
         {
@@ -59,7 +59,7 @@ public static class TwoNumbersSumV2
         return Array.Empty<int>();
     }
 
-    private static int[] TwoNumberSumV2(int[] inputNumbers, int sumToMatch)
+    private static int[] FindTwoNumbersSumHashSet(int[] inputNumbers, int sumToMatch)
     {
         HashSet<int> visited = new();
 
@@ -78,8 +78,6 @@ public static class TwoNumbersSumV2
         // Common Logic B: Return Array.Empty<int>() when no match is found
         return Array.Empty<int>();
     }
-
-
 
     private static void DisplayInputAndSum(int[] inputNumbers, int sumToMatch)
     {
