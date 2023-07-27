@@ -35,7 +35,7 @@ public static class TwoNumbersSumV2
         int[] outputArray = twoNumberSumFunc(inputNumbers, sumToMatch);
 
         // Common Logic B: Display output
-        WriteLine($"Output: [{Helpers.ConvertIntArrayToString(outputArray)}]");
+        WriteLine($"Output: [{ArrayToStringHelper.ConvertIntArrayToString(outputArray)}]");
 
         Console.ResetColor();
 
@@ -79,19 +79,11 @@ public static class TwoNumbersSumV2
         return Array.Empty<int>();
     }
 
-    private static ConsoleColor GetConsoleColor(ConsoleColorStyle style)
-    {
-        return style switch
-        {
-            ConsoleColorStyle.DarkGreen => ConsoleColor.DarkGreen,
-            ConsoleColorStyle.DarkMagenta => ConsoleColor.DarkMagenta,
-            _ => ConsoleColor.White
-        };
-    }
+
 
     private static void DisplayInputAndSum(int[] inputNumbers, int sumToMatch)
     {
-        WriteLine($"Input Array: [{Helpers.ConvertIntArrayToString(inputNumbers)}]");
+        WriteLine($"Input Array: [{ArrayToStringHelper.ConvertIntArrayToString(inputNumbers)}]");
         WriteLine($"Sum to Match: {sumToMatch}");
     }
 
