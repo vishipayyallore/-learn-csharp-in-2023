@@ -14,10 +14,10 @@ public static class TwoNumbersSumV2
         var inputNumbers = new int[] { 3, 5, -4, 8, 11, 1, -1, 6 };
         var sumToMatch = 10;
 
-        // Using Func<T> version for TwoNumberSumV1 logic
+        // Using Func<T> version for FindTwoNumbersSumBruteForce logic
         ExecuteTwoNumberSum(inputNumbers, sumToMatch, FindTwoNumbersSumBruteForce, titles[0], ConsoleColorStyle.DarkGreen);
 
-        // Using Func<T> version for TwoNumberSumV2 logic
+        // Using Func<T> version for FindTwoNumbersSumHashSet logic
         ExecuteTwoNumberSum(inputNumbers, sumToMatch, FindTwoNumbersSumHashSet, titles[1], ConsoleColorStyle.DarkMagenta);
     }
 
