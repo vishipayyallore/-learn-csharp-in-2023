@@ -1,6 +1,6 @@
 ﻿namespace ArrayAlgosDemo.Common;
 
-public static class Helpers
+public static class ArrayToStringHelper
 {
     public static string[] ConvertIntArrayToStringArray(int[] inputArray)
     {

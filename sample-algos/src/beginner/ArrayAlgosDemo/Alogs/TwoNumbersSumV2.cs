@@ -3,7 +3,7 @@ using HeaderFooter;
 
 namespace ArrayAlgosDemo.Alogs;
 
-public static class TwoNumbersSum
+public static class TwoNumbersSumV2
 {
     private static readonly Header _header = new();
     private static readonly Footer _footer = new();
@@ -14,31 +14,36 @@ public static class TwoNumbersSum
         var inputNumbers = new int[] { 3, 5, -4, 8, 11, 1, -1, 6 };
         var sumToMatch = 10;
 
-        ExecuteTwoNumberSum(TwoNumberSumV1, inputNumbers, sumToMatch, titles[0], ConsoleColorStyle.DarkCyan);
+        // Using Func<T> version for TwoNumberSumV1 logic
+        ExecuteTwoNumberSum(inputNumbers, sumToMatch, FindTwoNumbersSumBruteForce, titles[0], ConsoleColorStyle.DarkGreen);
 
-        ExecuteTwoNumberSum(TwoNumberSumV2, inputNumbers, sumToMatch, titles[1], ConsoleColorStyle.DarkYellow);
+        // Using Func<T> version for TwoNumberSumV2 logic
+        ExecuteTwoNumberSum(inputNumbers, sumToMatch, FindTwoNumbersSumHashSet, titles[1], ConsoleColorStyle.DarkMagenta);
     }
 
-    private static void ExecuteTwoNumberSum(Func<int[], int, int[]> twoNumberSumMethod,
-        int[] inputNumbers, int sumToMatch, string title, ConsoleColorStyle consoleColor)
+    private static void ExecuteTwoNumberSum(int[] inputNumbers, int sumToMatch, Func<int[], int, int[]> twoNumberSumFunc,
+        string title, ConsoleColorStyle consoleColor)
     {
         _header.DisplayHeader('=', title);
 
-        ForegroundColor = ConsoleColorStyleHelper.GetConsoleForegroundColor(consoleColor);
+        Console.ForegroundColor = ConsoleColorStyleHelper.GetConsoleForegroundColor(consoleColor);
 
-        int[] outputArray = twoNumberSumMethod(inputNumbers, sumToMatch);
+        // Common Logic A: Display input and sum
+        DisplayInputAndSum(inputNumbers, sumToMatch);
 
+        // Execute the provided function (Func<T>)
+        int[] outputArray = twoNumberSumFunc(inputNumbers, sumToMatch);
+
+        // Common Logic B: Display output
         WriteLine($"Output: [{ArrayToStringHelper.ConvertIntArrayToString(outputArray)}]");
 
-        ResetColor();
+        Console.ResetColor();
 
         _footer.DisplayFooter('-');
     }
 
-    private static int[] TwoNumberSumV1(int[] inputNumbers, int sumToMatch)
+    private static int[] FindTwoNumbersSumBruteForce(int[] inputNumbers, int sumToMatch)
     {
-        DisplayInputAndSum(inputNumbers, sumToMatch); ;
-
         for (int i = 0; i < inputNumbers.Length - 1; i++)
         {
             for (int j = i + 1; j < inputNumbers.Length; j++)
@@ -50,13 +55,12 @@ public static class TwoNumbersSum
             }
         }
 
+        // Common Logic B: Return Array.Empty<int>() when no match is found
         return Array.Empty<int>();
     }
 
-    private static int[] TwoNumberSumV2(int[] inputNumbers, int sumToMatch)
+    private static int[] FindTwoNumbersSumHashSet(int[] inputNumbers, int sumToMatch)
     {
-        DisplayInputAndSum(inputNumbers, sumToMatch);
-
         HashSet<int> visited = new();
 
         for (int i = 0; i < inputNumbers.Length; i++)
@@ -71,6 +75,7 @@ public static class TwoNumbersSum
             visited.Add(inputNumbers[i]);
         }
 
+        // Common Logic B: Return Array.Empty<int>() when no match is found
         return Array.Empty<int>();
     }
 
@@ -80,4 +85,9 @@ public static class TwoNumbersSum
         WriteLine($"Sum to Match: {sumToMatch}");
     }
 
+    // Helper method to avoid Console.WriteLine() duplication
+    private static void WriteLine(string message)
+    {
+        Console.WriteLine(message);
+    }
 }
