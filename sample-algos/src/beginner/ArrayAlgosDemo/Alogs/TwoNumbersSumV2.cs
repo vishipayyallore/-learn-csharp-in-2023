@@ -1,4 +1,5 @@
 ﻿using ArrayAlgosDemo.Common;
+using ArrayAlgosDemo.Entities;
 using HeaderFooter;
 
 namespace ArrayAlgosDemo.Alogs;
@@ -11,14 +12,24 @@ public static class TwoNumbersSumV2
 
     public static void ShowDemo()
     {
-        var inputNumbers = new int[] { 3, 5, -4, 8, 11, 1, -1, 6 };
-        var sumToMatch = 10;
+        int iCounter = 0;
 
-        // Using Func<T> version for FindTwoNumbersSumBruteForce logic
-        ExecuteTwoNumberSum(inputNumbers, sumToMatch, FindTwoNumbersSumBruteForce, titles[0], ConsoleColorStyle.DarkGreen);
+        TwoNumbersSumInputSet.GenerateTwoNumbersSumInputs().ForEach(input =>
+        {
+            iCounter++;
 
-        // Using Func<T> version for FindTwoNumbersSumHashSet logic
-        ExecuteTwoNumberSum(inputNumbers, sumToMatch, FindTwoNumbersSumHashSet, titles[1], ConsoleColorStyle.DarkMagenta);
+            if (input.InputNumbers is null)
+            {
+                WriteLine("Error: Input array or function parameter is null.");
+                return;
+            }
+
+            // Using Func<T> version for FindTwoNumbersSumBruteForce logic
+            ExecuteTwoNumberSum(input.InputNumbers, input.SumToMatch, FindTwoNumbersSumBruteForce, $"{titles[0]} - Set {iCounter}", ConsoleColorStyle.DarkGreen);
+
+            // Using Func<T> version for FindTwoNumbersSumHashSet logic
+            ExecuteTwoNumberSum(input.InputNumbers, input.SumToMatch, FindTwoNumbersSumHashSet, $"{titles[1]} - Set {iCounter}", ConsoleColorStyle.DarkMagenta);
+        });
     }
 
     private static void ExecuteTwoNumberSum(int[] inputNumbers, int sumToMatch, Func<int[], int, int[]> twoNumberSumFunc,
