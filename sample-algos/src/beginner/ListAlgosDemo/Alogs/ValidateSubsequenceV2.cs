@@ -14,26 +14,22 @@ public static class ValidateSubsequenceV2
     {
         int iCounter = 0;
 
-        _header.DisplayHeader('=', title);
-
         ValidateSubsequenceInputSet.GenerateInputSets().ForEach(inputSet =>
         {
-            iCounter++;
-
             if (inputSet.NumbersList is null || inputSet.Sequence is null)
             {
                 Console.WriteLine("Error: Input list or sequence is null.");
                 return;
             }
 
-            ExecuteValidation(inputSet.NumbersList, inputSet.Sequence, $"{title} - Set {iCounter}");
+            ExecuteValidation(inputSet.NumbersList, inputSet.Sequence, $"{title} - Set {++iCounter}");
         });
-
-        _footer.DisplayFooter('-');
     }
 
     private static void ExecuteValidation(List<int> numbersList, List<int> sequence, string title)
     {
+        _header.DisplayHeader('=', title);
+
         Console.ForegroundColor = ConsoleColor.DarkCyan;
 
         // Common Logic A: Display input and sequence
@@ -46,6 +42,8 @@ public static class ValidateSubsequenceV2
         Console.WriteLine($"Is Valid Subsequence: {isValidSubsequence}");
 
         Console.ResetColor();
+
+        _footer.DisplayFooter('-');
     }
 
     private static bool IsValidSubsequence(List<int> numbersList, List<int> sequence)
