@@ -27,8 +27,8 @@ public static class ValidateSubsequence
 
     private static bool IsValidSubsequence(List<int> numbersList, List<int> sequence)
     {
-        WriteLine($"Inputs: {Helpers.ConvertIntegerListToString(numbersList)}");
-        WriteLine($"Sequence Inputs: {Helpers.ConvertIntegerListToString(sequence)}");
+        WriteLine($"Inputs: {ListToStringHelper.ConvertIntegerListToString(numbersList)}");
+        WriteLine($"Sequence Inputs: {ListToStringHelper.ConvertIntegerListToString(sequence)}");
 
         if (sequence.Count > numbersList.Count || sequence.Count != sequence.ToHashSet().Count && sequence.ToHashSet().Count != 1)
         {

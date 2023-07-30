@@ -1,6 +1,6 @@
 ﻿namespace ListAlgosDemo.Common;
 
-public static class Helpers
+public static class ListToStringHelper
 {
     public static string ConvertIntegerListToString(List<int> inputList)
     {
