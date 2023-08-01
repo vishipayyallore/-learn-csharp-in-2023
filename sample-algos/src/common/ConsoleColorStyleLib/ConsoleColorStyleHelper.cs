@@ -1,4 +1,4 @@
-﻿namespace ArrayAlgosDemo.Common;
+﻿namespace ConsoleColorStyleLib;
 
 public static class ConsoleColorStyleHelper
 {

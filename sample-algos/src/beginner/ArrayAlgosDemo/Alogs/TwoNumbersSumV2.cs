@@ -1,5 +1,6 @@
 ﻿using ArrayAlgosDemo.Common;
 using ArrayAlgosDemo.Entities;
+using ConsoleColorStyleLib;
 using HeaderFooter;
 
 namespace ArrayAlgosDemo.Alogs;
