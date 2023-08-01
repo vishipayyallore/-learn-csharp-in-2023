@@ -12,6 +12,8 @@ public static class ConsoleColorStyleHelper
 
         ConsoleColorStyle.DarkMagenta => ConsoleColor.DarkMagenta,
 
+        ConsoleColorStyle.Red => ConsoleColor.Red,
+
         _ => ConsoleColor.White
     };
 

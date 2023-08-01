@@ -8,5 +8,7 @@ public enum ConsoleColorStyle
 
     DarkGreen = 3,
 
-    DarkMagenta = 4
+    DarkMagenta = 4,
+
+    Red = 5,
 }
