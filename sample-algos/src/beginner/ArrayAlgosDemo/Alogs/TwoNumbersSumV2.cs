@@ -1,5 +1,6 @@
 ﻿using ArrayAlgosDemo.Common;
 using ArrayAlgosDemo.Entities;
+using ConsoleColorStyleLib;
 using HeaderFooter;
 
 namespace ArrayAlgosDemo.Alogs;
@@ -20,7 +21,10 @@ public static class TwoNumbersSumV2
 
             if (input.InputNumbers is null)
             {
-                WriteLine("Error: Input array or function parameter is null.");
+                ForegroundColor = ConsoleColorStyleHelper.GetConsoleForegroundColor(ConsoleColorStyle.Red);
+                WriteLine($"Error: Input array or function parameter is null. Set {iCounter}");
+                ResetColor();
+
                 return;
             }
 
@@ -37,7 +41,7 @@ public static class TwoNumbersSumV2
     {
         _header.DisplayHeader('=', title);
 
-        Console.ForegroundColor = ConsoleColorStyleHelper.GetConsoleForegroundColor(consoleColor);
+        ForegroundColor = ConsoleColorStyleHelper.GetConsoleForegroundColor(consoleColor);
 
         // Common Logic A: Display input and sum
         DisplayInputAndSum(inputNumbers, sumToMatch);
@@ -48,7 +52,7 @@ public static class TwoNumbersSumV2
         // Common Logic B: Display output
         WriteLine($"Output: [{ArrayToStringHelper.ConvertIntArrayToString(outputArray)}]");
 
-        Console.ResetColor();
+        ResetColor();
 
         _footer.DisplayFooter('-');
     }
@@ -96,9 +100,4 @@ public static class TwoNumbersSumV2
         WriteLine($"Sum to Match: {sumToMatch}");
     }
 
-    // Helper method to avoid Console.WriteLine() duplication
-    private static void WriteLine(string message)
-    {
-        Console.WriteLine(message);
-    }
 }

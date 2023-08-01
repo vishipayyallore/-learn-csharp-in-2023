@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\common\ConsoleColorStyleLib\ConsoleColorStyleLib.csproj" />
     <ProjectReference Include="..\..\common\HeaderFooter\HeaderFooter.csproj" />
   </ItemGroup>
 
