@@ -1,4 +1,5 @@
-﻿using HeaderFooter;
+﻿using ConsoleColorStyleLib;
+using HeaderFooter;
 using ListAlgosDemo.Common;
 using ListAlgosDemo.Entities;
 
@@ -16,32 +17,34 @@ public static class ValidateSubsequenceV2
 
         ValidateSubsequenceInputSet.GenerateInputSets().ForEach(inputSet =>
         {
+            iCounter++;
+
             if (inputSet.NumbersList is null || inputSet.Sequence is null)
             {
-                Console.WriteLine("Error: Input list or sequence is null.");
+                ForegroundColor = ConsoleColorStyleHelper.GetConsoleForegroundColor(ConsoleColorStyle.Red);
+                WriteLine($"Error: Input list or sequence is null. Set {iCounter}");
+                ResetColor();
+
                 return;
             }
 
-            ExecuteValidation(inputSet.NumbersList, inputSet.Sequence, $"{title} - Set {++iCounter}");
+            ExecuteValidation(inputSet.NumbersList, inputSet.Sequence, $"{title} - Set {iCounter}", ConsoleColorStyle.DarkCyan);
         });
     }
 
-    private static void ExecuteValidation(List<int> numbersList, List<int> sequence, string title)
+    private static void ExecuteValidation(List<int> numbersList, List<int> sequence, string title, ConsoleColorStyle consoleColorStyle)
     {
         _header.DisplayHeader('=', title);
 
-        Console.ForegroundColor = ConsoleColor.DarkCyan;
+        ForegroundColor = ConsoleColorStyleHelper.GetConsoleForegroundColor(consoleColorStyle);
 
-        // Common Logic A: Display input and sequence
         DisplayInputAndSequence(numbersList, sequence, title);
 
-        // Execute the validation
         bool isValidSubsequence = IsValidSubsequence(numbersList, sequence);
 
-        // Common Logic B: Display output
-        Console.WriteLine($"Is Valid Subsequence: {isValidSubsequence}");
+        WriteLine($"Is Valid Subsequence: {isValidSubsequence}");
 
-        Console.ResetColor();
+        ResetColor();
 
         _footer.DisplayFooter('-');
     }
@@ -69,9 +72,9 @@ public static class ValidateSubsequenceV2
 
     private static void DisplayInputAndSequence(List<int> numbersList, List<int> sequence, string title)
     {
-        Console.WriteLine($"{title}");
-        Console.WriteLine($"Input List: {ListToStringHelper.ConvertIntegerListToString(numbersList)}");
-        Console.WriteLine($"Sequence: {ListToStringHelper.ConvertIntegerListToString(sequence)}");
+        WriteLine($"{title}");
+        WriteLine($"Input List: {ListToStringHelper.ConvertIntegerListToString(numbersList)}");
+        WriteLine($"Sequence: {ListToStringHelper.ConvertIntegerListToString(sequence)}");
     }
 
 }
