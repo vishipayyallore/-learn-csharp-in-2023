@@ -3,3 +3,5 @@
 TwoNumbersSum.ShowDemo();
 
 TwoNumbersSumV2.ShowDemo();
+
+SortedSquaredArray.ShowDemo();
