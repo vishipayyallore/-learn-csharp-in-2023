@@ -12,9 +12,11 @@ List<int> results = new() { 0, 0, 1 };
 
 WriteLine($"Winner: {TournamentWinner(competitions, results)}");
 
+WriteLine($"Winner: {TournamentWinnerV1(competitions, results)}");
+
 static string TournamentWinner(List<List<string>> competitions, List<int> results)
 {
-    Dictionary<string, int> winners = new();
+    Dictionary<string, int> teamPoints = new();
     int iCounter = 0;
 
     results.ForEach(result =>
@@ -22,19 +24,43 @@ static string TournamentWinner(List<List<string>> competitions, List<int> result
         var currentWinner = (result == 0) ? competitions[iCounter][1] : competitions[iCounter][0];
         iCounter++;
 
-        if(winners.ContainsKey(currentWinner))
+        if (teamPoints.ContainsKey(currentWinner))
         {
-            winners[currentWinner]+= 3;
+            teamPoints[currentWinner] += 3;
         }
         else
         {
-            winners.Add(currentWinner, 3);
+            teamPoints.Add(currentWinner, 3);
         }
-        // WriteLine(currentWinner);
     });
 
-    
-    return winners.OrderByDescending(x => x.Value).First().Key;
+    return teamPoints.OrderByDescending(x => x.Value).First().Key;
+}
+
+static string TournamentWinnerV1(List<List<string>> competitions, List<int> results)
+{
+    if (competitions.Count != results.Count)
+    {
+        throw new ArgumentException("Competitions and results lists must have the same number of elements.");
+    }
+
+    Dictionary<string, int> teamPoints = new();
+
+    for (int i = 0; i < competitions.Count; i++)
+    {
+        string currentWinner = results[i] == 0 ? competitions[i][1] : competitions[i][0];
+
+        if (teamPoints.ContainsKey(currentWinner))
+        {
+            teamPoints[currentWinner] += 3;
+        }
+        else
+        {
+            teamPoints.Add(currentWinner, 3);
+        }
+    }
+
+    return teamPoints.OrderByDescending(x => x.Value).First().Key;
 }
 
 static void ShowCaseTryParseEnumDemo()
