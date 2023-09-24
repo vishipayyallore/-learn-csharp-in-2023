@@ -1,5 +1,4 @@
-﻿
-WriteLine("Welcome to Bethany's Pie Shop HRM");
+﻿WriteLine("Welcome to Bethany's Pie Shop HRM");
 
 ShowBasicDataTypesDemo();
 
