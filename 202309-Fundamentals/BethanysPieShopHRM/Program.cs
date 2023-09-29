@@ -1,9 +1,24 @@
 ﻿WriteLine("Welcome to Bethany's Pie Shop HRM");
 
 ShowBasicDataTypesDemo();
+ShowBasicCharDemo();
 
 WriteLine("\n\nPress any key ...");
 ReadKey();
+
+static void ShowBasicCharDemo()
+{
+    char userSelection = 'a';
+
+    char upperVersion = char.ToUpper(userSelection);
+    WriteLine($"{userSelection} ToUpper: {upperVersion}");
+
+    bool isDigit = char.IsDigit(userSelection);
+    WriteLine($"{userSelection} Is Digit: {isDigit}");
+
+    bool isLetter = char.IsLetter(userSelection);
+    WriteLine($"{userSelection} Is Letter: {isLetter}");
+}
 
 static void ShowBasicDataTypesDemo()
 {
