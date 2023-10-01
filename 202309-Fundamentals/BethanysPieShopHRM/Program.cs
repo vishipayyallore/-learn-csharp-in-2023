@@ -2,8 +2,54 @@
 
 ShowBasicDataTypesDemo();
 
+ShowBasicCharDemo();
+
+ShowDateTimeDemo();
+
 WriteLine("\n\nPress any key ...");
 ReadKey();
+
+static void ShowDateTimeDemo()
+{
+    DateTime hireDate = new(2022, 3, 28, 14, 30, 0);
+    WriteLine(hireDate);
+
+    DateTime exitDate = new(2025, 12, 11);
+    WriteLine(exitDate);
+
+    DateTime startDate = hireDate.AddDays(15);
+    WriteLine(startDate);
+
+    var currentDate = DateTime.Now;
+    WriteLine(currentDate);
+
+    bool areWeInDst = currentDate.IsDaylightSavingTime();
+    WriteLine(areWeInDst);
+
+    DateTime startHour = DateTime.Now;
+    TimeSpan workTime = new(8, 35, 0);
+    DateTime endHour = startHour.Add(workTime);
+
+    Console.WriteLine(startHour);
+    Console.WriteLine(endHour);
+
+    Console.WriteLine(startHour.ToLongDateString());
+    Console.WriteLine(endHour.ToShortTimeString());
+}
+
+static void ShowBasicCharDemo()
+{
+    char userSelection = 'a';
+
+    char upperVersion = char.ToUpper(userSelection);
+    WriteLine($"{userSelection} ToUpper: {upperVersion}");
+
+    bool isDigit = char.IsDigit(userSelection);
+    WriteLine($"{userSelection} Is Digit: {isDigit}");
+
+    bool isLetter = char.IsLetter(userSelection);
+    WriteLine($"{userSelection} Is Letter: {isLetter}");
+}
 
 static void ShowBasicDataTypesDemo()
 {
