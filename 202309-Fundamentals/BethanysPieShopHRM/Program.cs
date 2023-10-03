@@ -1,5 +1,8 @@
 ﻿WriteLine("Welcome to Bethany's Pie Shop HRM");
 
+string name = typeof(Program).Namespace ?? "None!";
+Console.WriteLine($"Namespace: {name}");
+
 ShowBasicDataTypesDemo();
 
 ShowBasicCharDemo();
